@@ -1,15 +1,54 @@
 {
   "project_info": {
     "project_number": "482155083551",
+    "firebase_url": "https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "educare-746e7",
     "storage_bucket": "educare-746e7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:482155083551:android:fa7242756ac0375f29e22a",
+        "android_client_info": {
+          "package_name": "com.example.ed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGa4zlgg1t8O0gfyscoykm8hpGEQ0HL9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:482155083551:android:59e7fe7eecd5b7bc29e22a",
         "android_client_info": {
           "package_name": "com.example.educa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGa4zlgg1t8O0gfyscoykm8hpGEQ0HL9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482155083551:android:ed5df2324dc1990529e22a",
+        "android_client_info": {
+          "package_name": "com.example.educare"
         }
       },
       "oauth_client": [],

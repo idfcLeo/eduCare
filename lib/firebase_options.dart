@@ -57,6 +57,8 @@ class DefaultFirebaseOptions {
     appId: '1:482155083551:android:59e7fe7eecd5b7bc29e22a',
     messagingSenderId: '482155083551',
     projectId: 'educare-746e7',
+    databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'educare-746e7.firebasestorage.app',
   );
+
 }

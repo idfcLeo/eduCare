@@ -13,7 +13,8 @@ class YourProgressScreen extends StatelessWidget {
         title: Text('$role Dashboard'),
         backgroundColor: Colors.blueAccent,
       ),
-      body: SingleChildScrollView(  // Make the body scrollable
+      body: SingleChildScrollView(
+        // Make the body scrollable
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Container(
@@ -59,7 +60,8 @@ class YourProgressScreen extends StatelessWidget {
                         ],
                         xValueMapper: (_ChartData data, _) => data.category,
                         yValueMapper: (_ChartData data, _) => data.value,
-                        dataLabelSettings: const DataLabelSettings(isVisible: true),
+                        dataLabelSettings:
+                            const DataLabelSettings(isVisible: true),
                       ),
                     ],
                   ),
@@ -71,7 +73,7 @@ class YourProgressScreen extends StatelessWidget {
                   chart: SfCartesianChart(
                     title: ChartTitle(text: 'Monthly Progress'),
                     primaryXAxis: CategoryAxis(),
-                    series: <ChartSeries>[
+                    series: <CartesianSeries>[
                       ColumnSeries<_ChartData, String>(
                         dataSource: [
                           _ChartData.pieOrBar('Jan', 75),
@@ -81,7 +83,8 @@ class YourProgressScreen extends StatelessWidget {
                         ],
                         xValueMapper: (_ChartData data, _) => data.category,
                         yValueMapper: (_ChartData data, _) => data.value,
-                        dataLabelSettings: const DataLabelSettings(isVisible: true),
+                        dataLabelSettings:
+                            const DataLabelSettings(isVisible: true),
                       ),
                     ],
                   ),
@@ -93,7 +96,7 @@ class YourProgressScreen extends StatelessWidget {
                   chart: SfCartesianChart(
                     title: ChartTitle(text: 'Performance Over Time'),
                     primaryXAxis: DateTimeAxis(),
-                    series: <ChartSeries>[
+                    series: <CartesianSeries>[
                       LineSeries<_ChartData, DateTime>(
                         dataSource: [
                           _ChartData.lineChart(DateTime(2024, 1, 1), 60),
@@ -103,7 +106,8 @@ class YourProgressScreen extends StatelessWidget {
                         ],
                         xValueMapper: (_ChartData data, _) => data.date,
                         yValueMapper: (_ChartData data, _) => data.value,
-                        dataLabelSettings: const DataLabelSettings(isVisible: true),
+                        dataLabelSettings:
+                            const DataLabelSettings(isVisible: true),
                       ),
                     ],
                   ),
@@ -123,7 +127,8 @@ class YourProgressScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildChartCard(BuildContext context, {required String title, required Widget chart}) {
+  Widget _buildChartCard(BuildContext context,
+      {required String title, required Widget chart}) {
     return Card(
       elevation: 8,
       shape: RoundedRectangleBorder(
@@ -154,7 +159,10 @@ class YourProgressScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildProgressCard(BuildContext context, {required String title, required double value, required String progressText}) {
+  Widget _buildProgressCard(BuildContext context,
+      {required String title,
+      required double value,
+      required String progressText}) {
     return Card(
       elevation: 8,
       shape: RoundedRectangleBorder(
