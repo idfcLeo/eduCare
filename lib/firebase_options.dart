@@ -17,29 +17,17 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -59,6 +47,48 @@ class DefaultFirebaseOptions {
     projectId: 'educare-746e7',
     databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'educare-746e7.firebasestorage.app',
+  );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBS6CFvKXtk5HAz4nYv31L9_6yqIWhmlF8',
+    appId: '1:482155083551:web:2cdebd60e400753429e22a',
+    messagingSenderId: '482155083551',
+    projectId: 'educare-746e7',
+    authDomain: 'educare-746e7.firebaseapp.com',
+    databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'educare-746e7.firebasestorage.app',
+    measurementId: 'G-Y3KH1BM5JJ',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyArgZow3Gqlj_Cr3D5IXQl5XgAFIAr7iJA',
+    appId: '1:482155083551:ios:7aea6e53c127e95529e22a',
+    messagingSenderId: '482155083551',
+    projectId: 'educare-746e7',
+    databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'educare-746e7.firebasestorage.app',
+    iosBundleId: 'com.example.educare',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyArgZow3Gqlj_Cr3D5IXQl5XgAFIAr7iJA',
+    appId: '1:482155083551:ios:7aea6e53c127e95529e22a',
+    messagingSenderId: '482155083551',
+    projectId: 'educare-746e7',
+    databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'educare-746e7.firebasestorage.app',
+    iosBundleId: 'com.example.educare',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBS6CFvKXtk5HAz4nYv31L9_6yqIWhmlF8',
+    appId: '1:482155083551:web:7d95276fe7a0ea6529e22a',
+    messagingSenderId: '482155083551',
+    projectId: 'educare-746e7',
+    authDomain: 'educare-746e7.firebaseapp.com',
+    databaseURL: 'https://educare-746e7-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'educare-746e7.firebasestorage.app',
+    measurementId: 'G-2MWCP77HK2',
   );
 
 }
