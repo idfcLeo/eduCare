@@ -8,6 +8,7 @@ import 'auth/student_auth.dart';
 import 'auth/teacher_auth.dart';
 import 'stuident_screens/student.dart';
 import 'teaher_screen/teacher.dart';
+import 'auth/auth_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -68,6 +69,7 @@ class EduConnectApp extends StatelessWidget {
       '/teacherAuth': (context) => const TeacherAuth(),
       '/studentHome': (context) => const StudentHomeScreen(),
       '/teacherHome': (context) => const TeacherHomeScreen(),
+      '/authscreen': (context) => const SimpleAuthPage(),
     };
   }
 }
