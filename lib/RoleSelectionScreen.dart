@@ -22,7 +22,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
   // Fetch roles from Firestore
   Future<List<Map<String, dynamic>>> _fetchRoles() async {
     try {
-      final snapshot = await _firestore.collection('roles').get();
+      final snapshot = await _firestore.collection('roles' ).get();
       return snapshot.docs.map((doc) {
         final data = doc.data();
         debugPrint(
